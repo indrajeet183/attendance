@@ -12,7 +12,6 @@ public interface AttendanceRepo extends CrudRepository<Attendance,Long> {
 
     // No need to put query annotation if method name follows naming rule.
     // For details, check Spring Data JPA documentation
-    List<Attendance> findByLastname(String lastname);
-
+    List<Attendance> findBybranchName(String branchName);
 
 }

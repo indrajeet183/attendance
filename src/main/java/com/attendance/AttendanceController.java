@@ -23,11 +23,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class AttendanceController{
 
     @Autowired
-    private AttendanceService attImpl;
+    AttendanceService attImpl;
 
 
     @RequestMapping(value="", method=RequestMethod.POST)
     public Attendance createAttendance(@RequestBody Attendance attendance) {
+        System.out.println("APRAM:"+attendance);
         return attImpl.save(attendance);
     }
     

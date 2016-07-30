@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
@@ -17,10 +18,11 @@ import org.springframework.validation.annotation.Validated;
 
 @Service
 @Validated
+@Component
 public class AttendanceImpl implements AttendanceService {
     
     @Autowired
-    private  AttendanceRepo attRepo;
+    AttendanceRepo attRepo;
 
     @Override
     @Transactional
