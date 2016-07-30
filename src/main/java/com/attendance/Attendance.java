@@ -16,10 +16,13 @@ public class Attendance {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private long Id;
+    private long id;
 
     private String branchName;
 
+    public Attendance(String branchName){
+        this.branchName=branchName;
+    }
     public void setbranchName(String branchName) {
         this.branchName=branchName;
     }
@@ -28,7 +31,7 @@ public class Attendance {
     }
     @Override
     public String toString() {
-        return String.format("BranchName :" +branchName);
+        return String.format("ID :"+id+" BranchName :" +branchName);
     }
     protected Attendance() {}
 

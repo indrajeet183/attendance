@@ -33,6 +33,7 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 		compile("com.h2database:h2")
 		testCompile("junit:junit")
+	compile group: 'org.modelmapper', name: 'modelmapper', version: '0.3.5'
 	}
 
 

@@ -17,18 +17,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
+import org.modelmapper.ModelMapper;
 @RestController
 @RequestMapping("/")
 public class AttendanceController{
 
     @Autowired
     private AttendanceService attService;
-    private AttendanceRepo attRepo=null;
+
     @RequestMapping(value="", method=RequestMethod.POST)
     public Attendance createAttendance(@RequestBody Attendance attendance) {
         System.out.println("PARAM:"+attendance);
-        return attService.save(attendance);
+            return attService.save(attendance);
     }
     
    // GET: http://localhost:8080/
@@ -37,5 +37,5 @@ public class AttendanceController{
         List<Attendance> attendances = new ArrayList<Attendance>();
         attendances = (List<Attendance>) attService.findAll();
         return attendances;
-    }
+           }
 }
