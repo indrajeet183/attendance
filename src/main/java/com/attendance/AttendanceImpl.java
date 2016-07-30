@@ -24,7 +24,7 @@ public class AttendanceImpl implements AttendanceService {
 
     @Override
     @Transactional
-    public Attendance save(@NotNull @Valid final Attendance attendance) {
+    public Attendance save(final Attendance attendance) {
         return attRepo.save(attendance);
     }
 
