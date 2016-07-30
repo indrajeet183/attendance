@@ -29,7 +29,8 @@ public class Attendance {
         this.branchName=branchName;
     }
     public void setId(long Id){this.Id=Id;}
-    public String getbranchName(String branchName){
+    public long getId(){return Id;}
+    public String getbranchName(){
         return branchName;
     }
     @Override
