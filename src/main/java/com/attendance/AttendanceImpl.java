@@ -22,7 +22,7 @@ import org.springframework.validation.annotation.Validated;
 public class AttendanceImpl implements AttendanceService {
     
     @Autowired
-    AttendanceRepo attRepo;
+    private AttendanceRepo attRepo;
 
     @Override
     @Transactional

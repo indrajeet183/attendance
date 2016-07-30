@@ -23,20 +23,19 @@ import org.springframework.web.bind.annotation.RestController;
 public class AttendanceController{
 
     @Autowired
-    AttendanceService attImpl;
-
-
+    private AttendanceService attService;
+    private AttendanceRepo attRepo=null;
     @RequestMapping(value="", method=RequestMethod.POST)
     public Attendance createAttendance(@RequestBody Attendance attendance) {
-        System.out.println("APRAM:"+attendance);
-        return attImpl.save(attendance);
+        System.out.println("PARAM:"+attendance);
+        return attService.save(attendance);
     }
     
-    // GET: http://localhost:8080/Attendances
+   // GET: http://localhost:8080/
     @RequestMapping(value="", method=RequestMethod.GET)
     public List<Attendance> getAttendances() {
         List<Attendance> attendances = new ArrayList<Attendance>();
-        attendances = (List<Attendance>) attImpl.findAll();
+        attendances = (List<Attendance>) attService.findAll();
         return attendances;
     }
 }
