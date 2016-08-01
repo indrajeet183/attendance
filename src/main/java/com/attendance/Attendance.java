@@ -1,6 +1,7 @@
 package com.attendance;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.SerializerProvider;
@@ -33,14 +34,12 @@ public class Attendance {
     private List<Integer> attendanceArr;
     private String branchName;
 
-
+    @JsonFormat(shape= JsonFormat.Shape.STRING, pattern="yyyy-MM-dd",timezone="GMT")
     private Date date;
 
-    @JsonSerialize(using = CustomDateSerializer.class)
     public Date getDate() {
         return date;
     }
-
 
     public void setDate(Date date) {
         this.date = date;
@@ -67,7 +66,6 @@ public class Attendance {
 
     public void setId(long Id){this.Id=Id;}
     public long getId(){return Id;}
-
 
     @Override
     public String toString() {
