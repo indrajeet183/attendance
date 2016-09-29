@@ -34,6 +34,8 @@ public class Attendance {
     private List<Integer> attendanceArr;
     private String branchName;
 
+    String added;
+    
     @JsonFormat(shape= JsonFormat.Shape.STRING, pattern="yyyy-MM-dd",timezone="GMT")
     private Date date;
 
