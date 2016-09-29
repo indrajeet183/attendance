@@ -1,5 +1,5 @@
 package com.attendance;
-
+SADASDASDASDASDSAD
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.core.JsonGenerator;
@@ -35,7 +35,7 @@ public class Attendance {
     private String branchName;
 
     String added;
-    
+    String forked;
     @JsonFormat(shape= JsonFormat.Shape.STRING, pattern="yyyy-MM-dd",timezone="GMT")
     private Date date;
 
