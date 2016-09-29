@@ -35,7 +35,7 @@ public class Attendance {
     private String branchName;
 
     String added;
-    
+    String forked;
     @JsonFormat(shape= JsonFormat.Shape.STRING, pattern="yyyy-MM-dd",timezone="GMT")
     private Date date;
 
